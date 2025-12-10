@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Creativity</title>
+  <style>
+    .youtube-image {
+      width: 35px;
+      margin-top: 28px;
+      margin-left: 0;
+      margin-bottom: 9;
+    }
+
+    .video-title {
+      font-family: arial;
+      font-size: 18px;
+      font-weight: bold;
+      width: 300px;
+      line-height: 24px;
+      margin-bottom: 5;
+      margin-top: 0;
+    }
+
+    .video-starts {
+      font-size: 14px;
+      color: rgb(96, 96, 96);
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .video-author {
+      font-family: arial;
+      color: rgb(96, 96, 96);
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 19px;
+    }
+
+    .video-description {
+      font-family: arial;
+      font-size: 14px;
+      width: 280px;
+      color: rgb(96, 96, 96);
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+
+    .apple-logo {
+      width: 28px;
+      margin-top: 70px;
+      margin-bottom: 13px;
+    }
+
+    .apple-text {
+      font-size: 14px;
+      background-color: rgb(227, 65, 64);
+      text-align: center;
+      margin-top: 0;
+      color: white;
+      padding-top: 18px;
+      padding-bottom: 18px;
+      font-family: arial;
+      margin-bottom: 100px;
+    }
+
+    .apple-text2:hover {
+      text-decoration: underline;
+      color: white;
+    }
+
+    .tahoma-font {
+      font-family: tahoma;
+      font-weight: bold;
+      font-size: 50;
+    }
+
+    .deals {
+      font-weight: bold;
+      font-family: arial;
+      font-size: 40px;
+      width: 550px;
+      line-height: 40px;
+    }
+
+    .sales {
+      font-weight: 3;
+      font-size: 20;
+      font-style: italic;
+      color: red;
+      margin-bottom: 10px;
+    }
+
+    .cource-start {
+      font-family: verdana;
+      font-weight: bolder;
+      width: 200px;
+      line-height: 24px;
+    }
+
+    .beginner {
+      color: grey;
+      font-weight: 10;
+    }
+
+    .cource-middle {
+      font-family: verdana;
+      font-weight: 400;
+      width: 300px;
+      margin-bottom: 40px;
+
+    }
+
+    .cource-end {
+      color: white;
+      background-color: green;
+      height: 36px;
+      border: none;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: larger;
+      border-radius: 9px;
+      transition: opacity 1s;
+      transition: box-shadow color 0.8s;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .cource-end:hover {
+      opacity: 0.8;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.85);
+    }
+
+    .cource-end:active {
+      opacity: 0.6;
+    }
+
+    .shop {
+      font-family: Arial;
+      font-size: 40px;
+      font-weight: bolder;
+      text-align: center;
+      margin-bottom: 0px;
+    }
+
+    .apple {
+      font-family: Arial;
+      font-size: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .learn-more {
+      color: rgb(1, 145, 210);
+      text-align: center;
+      transition: hover 2s;
+      cursor: pointer;
+      font-family: arial;
+      font-weight: 500;
+    }
+
+    .learn-more:hover {
+      text-decoration: underline;
+    }
+
+    .new {
+      text-align: center;
+      color: red;
+      font-family: arial;
+      margin-bottom: 0px;
+    }
+
+    .macbook {
+      font-family: arial;
+      font-weight: bolder;
+      font-size: 30px;
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+
+    .supercharged {
+      font-family: arial;
+      font-weight: bolder;
+      font-size: 50px;
+      text-align: center;
+      margin-top: 2px;
+      margin-bottom: 0;
+    }
+
+    .from {
+      font-size: 20px;
+      color: grey;
+      font-family: arial;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .buy {
+      color: white;
+      background-color: rgb(1, 145, 210);
+      height: 36px;
+      border: none;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: larger;
+      border-radius: 29px;
+      transition: opacity 1s;
+      transition: box-shadow color 0.8s;
+      cursor: pointer;
+      margin-bottom: 20px;
+      text-align: center;
+      margin-left: 330px;
+    }
+
+    .buy:hover {
+      opacity: 0.8;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.85);
+    }
+
+    .buy:active {
+      opacity: 0.6;
+    }
+
+    .a {
+      font-size: 40px;
+      font-family: arial;
+      margin-bottom: 0px;
+    }
+
+    .usd {
+      font-size: 20px;
+      color: grey;
+      margin-bottom: 0px;
+    }
+
+    .b {
+      font-size: 20px;
+      margin-top: 5px;
+      color: green;
+      margin-bottom: 0px;
+    }
+
+    .after {
+      font-family: arial;
+      font-size: 18px;
+      color: grey;
+      margin-top: 8px;
+    }
+
+    .c {
+      color: red;
+      font-family: Arial;
+    }
+
+    .freecodecamporg {
+      font-size: 20px;
+      font-weight: bolder;
+      font-family: arial;
+      margin-bottom: 0;
+    }
+
+    .free {
+      color: grey;
+      font-size: 20px;
+      font-weight: 20;
+    }
+
+    .as {
+      font-family: arial;
+      width: 500px;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    .here {
+      margin-top: 25px;
+      font-weight: 300;
+      font-size: 18px;
+    }
+
+    .chp_it {
+      color: rgb(1, 145, 210);
+    }
+  </style>
+</head>
+
+<body>
+  <img class="youtube-image" src="Screenshot_2025-10-04_095744-removebg-preview.png">
+  <p class="video-title">
+    Talking Tech and AI with Google CEO Sundar Pichai!
+  </p>
+  <p class="video-starts">
+    3.4M views &middot; 6 months ago
+  </p>
+  <p class="video-author">
+    Marques Brownlee &#10003;
+  </p>
+  <p class="video-description">
+    Talking tech and AI on the heels of Google I/O. Also a daily driver phone reveal from Google's CEO. Shoutout to
+    Sundar!
+  </p>
+  <img class="apple-logo" src="apple-logo-png_seeklogo-158010-removebg-preview.png">
+  <p class="apple-text">
+    Shop early for the best selection of holiday favourites.<span class="apple-text2"> Shop now &#62; </span>
+  </p>
+  <hr>
+  <p class="tahoma-font">This is Tahoma Font</p>
+  <hr>
+  <p class="deals"> Biggest Deals of the Year! <span class="Sales">Sales end Tuesday</span></p>
+  <hr>
+  <p class="cource-start">HTML CSS COURCE<span class="beginner"> Beginner to Pro</span></p>
+  <p class="cource-middle">In this cource, we'll learn the skills you need to become a developer.</p>
+  <button class="cource-end">Get started</button>
+  <hr>
+  <p class="shop">Shopping for your business?</p>
+  <p class="apple">See how Apple at Work can help.</p>
+  <p class="learn-more">Learn more ></p>
+  <hr>
+  <p class="new">New</p>
+  <p class="macbook">MacBook Pro</p>
+  <p class="supercharged">Supercharged for pros. </p>
+  <p class="from">From $1999</p>
+  <button class="Buy">Buy</button>
+  <hr>
+  <p class="a">1,049.61 <span class="usd"> USD </span></p>
+  <p class="b">+18.05 (1.75%) <span class="today">today</span></p>
+  <p class="after">After hours 1,048.00 <span class="c"> -1.61 (0.15%)</span></p>
+  <hr>
+  <p class="freecodecamporg">freeCodecamp.org<span class="free"> @freeCodeCamp 1h</span></p>
+  <p class="as">As a web developer, you'll want to make your projects easy to use and navigate around.</p>
+  <p class="here">Here<span class="chp_it"> @chp_it </span>outlines the top skills new developers should have</p>
+  <hr>
+</body>
+
+</html>

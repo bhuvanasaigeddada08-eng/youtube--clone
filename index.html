@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> YOUTUBE CLONE</title>
+  <link rel="shortcut icon" href="icon-middle.png" type="image/x-icon" style="width: 20px;height: 5px;">
+  ]
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Roboto", arial, sans-serif;
+      background-color: rgb(247, 247, 247);
+    }
+
+    .header {
+      height: 57px;
+      display: flex;
+      flex-direction: row;
+      margin-top: 0px;
+      justify-content: space-between;
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      background-color: rgb(249, 247, 247);
+      border-bottom: 1px solid rgb(230, 225, 225);
+      z-index: 100;
+    }
+
+    .left-section {
+      width: 300px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .middle-section {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      flex: 1;
+    }
+
+    .right-section {
+      width: 250px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .menu {
+      height: 24px;
+      margin-left: 24px;
+      margin-right: 24px;
+      cursor: pointer;
+    }
+
+    .logo {
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .upload {
+      height: 24px;
+      cursor: pointer;
+      margin-left: 30px;
+      position: relative;
+    }
+
+    .grid {
+      height: 24px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .notifications {
+      height: 24px;
+      position: relative;
+    }
+
+    .notifications:hover {
+      cursor: pointer;
+    }
+
+    .profile {
+      height: 28px;
+      border-radius: 45px;
+      cursor: pointer;
+      margin-right: 32px;
+      width: 28px;
+    }
+
+    .search-bar {
+      height: 40px;
+      width: 340px;
+      padding-left: 12px;
+      padding-right: 12px;
+      border: solid;
+      border-color: rgb(221, 210, 210);
+      border-width: 1px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      font-size: 16px;
+      box-shadow: inset 0px 1px 2px rgb(238, 238, 238);
+      margin-left: 60px;
+      min-width: none;
+      flex: 1;
+      max-width: 300px;
+      width: 0px;
+
+    }
+
+    .sidebar-link:hover {
+      background-color: rgba(236, 233, 230, 0.699);
+    }
+
+    .button1 {
+      height: 40px;
+      width: 80px;
+      border: 1px solid rgb(204, 204, 204);
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+
+    .button2 {
+      height: 40px;
+      width: 38px;
+      margin-left: 12px;
+      background-color: rgb(248, 248, 248);
+      border: none;
+      border-radius: 20px;
+    }
+
+    .search-icon {
+      height: 32px;
+      margin-top: 2px;
+    }
+
+    .sidebar-link img {
+      height: 24px;
+      margin-bottom: 6.5px;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 56px;
+      bottom: 0;
+      background-color: white;
+      width: 72px;
+      padding-top: 4px;
+      z-index: 200;
+    }
+
+    .sidebar-link {
+      font-size: 10px;
+      height: 74px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-family: "Roboto", sans-serif;
+    }
+
+    .Exercise-youtube {
+      margin-top: 72px;
+      margin-left: 80px;
+    }
+
+    .container {
+      width: 310px;
+
+    }
+
+    .whole1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 24px;
+      row-gap: 48px;
+    }
+
+    .container:hover {
+      background-color: rgba(224, 224, 224, 0.751);
+      cursor: pointer;
+      border-radius: 20px;
+      transition: 0.6ms;
+    }
+
+    .image1 {
+      width: 100%;
+      margin-bottom: 0px;
+    }
+
+    .image2 {
+      width: 36px;
+      margin-top: 0px;
+      border-radius: 30px;
+    }
+
+    .thumbnailimage1 {
+      margin-bottom: 0px;
+      position: relative;
+    }
+
+    .darkp {
+      font-family: "Roboto", arial, sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+
+    .time {
+      background-color: black;
+      color: white;
+      width: 40px;
+      position: absolute;
+      font-family: "Robodo", arial, sans-serif;
+      font-size: 15px;
+      bottom: 13px;
+      right: 6px;
+    }
+
+    .manage {
+      width: 30px;
+    }
+
+    .thumbnailsub {
+      display: grid;
+      grid-template-columns: 51px 1fr;
+      margin-top: 7px;
+    }
+
+    .profile1 {
+      margin-top: 0px;
+    }
+
+    .middlep {
+      font-size: 12px;
+      color: rgb(96, 96, 96);
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+    }
+
+    .lastp {
+      margin-top: 2px;
+      font-size: 12px;
+      color: rgb(96, 96, 96);
+    }
+
+    @media (max-width:773px) {
+      .whole1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:1078px) {
+      .whole1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    .button2 .hoverhere {
+      background-color: rgb(142, 142, 142);
+      width: 100px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      margin-top: 10px;
+      margin-left: -13px;
+      color: white;
+      font-family: "Robodo", arial, sans-serif;
+      font-size: 16px;
+      border-radius: 8px;
+      opacity: 0;
+      transition: opacity 0.15s;
+      pointer-events: none;
+    }
+
+    .button2:hover .hoverhere {
+      opacity: 1;
+
+    }
+
+    .button1 {
+      position: relative;
+    }
+
+    .button1:hover {
+      cursor: pointer;
+    }
+
+    .button2:hover {
+      cursor: pointer;
+    }
+
+    .button1 .firsthoversearch {
+      position: absolute;
+      background-color: rgb(142, 142, 142);
+      color: white;
+      width: 60px;
+      margin-top: 14px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      border-radius: 20px;
+      font-size: 16px;
+      margin-left: 8px;
+      opacity: 0;
+      transition: opacity 0.15s;
+      pointer-events: none;
+    }
+
+    .button1:hover .firsthoversearch {
+      opacity: 1;
+    }
+
+    .cameraicon .text1 {
+      position: absolute;
+      background-color: rgb(142, 142, 142);
+      margin-top: 18px;
+      margin-left: 18px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 6px;
+      padding-right: 6px;
+      border-radius: 20px;
+      color: white;
+      font-family: "Robodo", arial, sans-serif;
+      font: size 16px;
+      opacity: 0;
+      transition: opacity 0.15s;
+      pointer-events: none;
+
+    }
+
+    .cameraicon:hover .text1 {
+      opacity: 1;
+    }
+
+    .gridicon .text2 {
+      position: absolute;
+      background-color: rgb(142, 142, 142);
+      margin-top: 18px;
+      margin-left: -25px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 6px;
+      padding-right: 6px;
+      border-radius: 20px;
+      color: white;
+      font-family: "Robodo", arial, sans-serif;
+      font: size 16px;
+      opacity: 0;
+      transition: opacity 0.15s;
+      pointer-events: none;
+    }
+
+    .gridicon:hover .text2 {
+      opacity: 1;
+    }
+
+    .voice-search:hover {
+      cursor: pointer;
+    }
+
+    .notificationsicon .text3 {
+      position: absolute;
+      position: absolute;
+      background-color: rgb(142, 142, 142);
+      margin-top: 18px;
+      margin-left: -25px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 6px;
+      padding-right: 6px;
+      border-radius: 20px;
+      color: white;
+      font-family: "Robodo", arial, sans-serif;
+      font: size 16px;
+      opacity: 0;
+      transition: opacity 0.15s;
+      pointer-events: none;
+    }
+
+    .notificationsicon:hover .text3 {
+      opacity: 1;
+    }
+
+    .notificationsicon .text4 {
+      position: absolute;
+      top: 10px;
+      right: 94px;
+      background-color: rgb(225, 75, 75);
+      border-radius: 15px;
+      font-size: 12px;
+      width: 10px;
+      color: white;
+      padding-left: 2px;
+    }
+
+    .image7 {
+      width: 36px;
+      border-radius: 30px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Exercise-youtube">
+    <div class="header">
+      <div class="left-section">
+        <img class="menu" src="hamburger-menu.svg" alt="hamberger-menu">
+        <img class="logo" src="youtube-logo.svg" alt="youtube-logo">
+      </div>
+      <div class="middle-section">
+        <input class="search-bar" type="search" placeholder="Search">
+        <button class="button1">
+          <img class="search-icon" src="search.svg" alt="seach-icon">
+          <div class="firsthoversearch">Search</div>
+        </button>
+        <button class="button2">
+          <img class="Voice-search" src="voice-search-icon.svg" alt="Voice-search-icon">
+          <div class="hoverhere">Voice-Search</div>
+        </button>
+      </div>
+      <div class="right-section">
+        <div class="cameraicon">
+          <img class="upload" src="upload.svg" alt="upload-logo">
+          <div class="text1">Create</div>
+        </div>
+        <div class="gridicon">
+          <img class="grid" src="grid-apps.svg" alt="grig-apps">
+          <div class="text2">Youtube Apps</div>
+        </div>
+        <div class="notificationsicon">
+          <img class="notifications" src="notifications.svg" alt="youtube-notifcations">
+          <div class="text3">Notifications</div>
+          <div class="text4">3</div>
+        </div>
+        <img class="profile" src="dddjyh.jpg" alt="mychannel">
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar-link">
+        <img src="home.svg" alt="home.svg">
+        <div>Home</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="explore.svg" alt="explore.svg">
+        <div>Explore</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="subscriptions.svg" alt="subscriptions.svg">
+        <div>Subscription</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="originals.svg" alt="originals.svg">
+        <div>Originals</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="youtube-music.svg" alt="youtube-music.svg">
+        <div>YouTube Music</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="library.svg" alt="library.svg">
+        <div>library</div>
+      </div>
+    </div>
+    <div class="whole1">
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY">
+            <img class="image1" src="thumbnail-1.webp" alt="thumbnail-1">
+          </a>
+          <div class="time">14:20</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image2" src="channel-1.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+            <p class="middlep">Marques Brownlee</p>
+            <p class="lastp">3.4M views · 6 months ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=mP0RAo9SKZk">
+            <img class="image1" src="thumbnail-2.webp" alt="thumbnail-1">
+          </a>
+          <div class="time">8:22</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image2" src="channel-2.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">Try Not To Laugh Challenge #9</p>
+            <p class="middlep">Markiplier</p>
+            <p class="lastp">37.9M subscribers</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=FgjPQQeTh1w">
+            <img class="image1" src="thumbnail-3.webp" alt="thumbnail-1">
+          </a>
+          <div class="time manage"> 9:13</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image2" src="channel-3.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">Crazy Tik Toks Taken Moments Before DISASTER</p>
+            <p class="middlep">SSSniperWolf</p>
+            <p class="lastp">12M views · 1 year ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=094y1Z2wpJg">
+            <img class="image1" src="thumbnail-4.webp" alt="thumbnail-1">
+          </a>
+          <div class="time">22:09</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image2" src="channel-4.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">The Simplest Math Problem No One Can Solve - Coll Conjecture</p>
+            <p class="middlep">Marques Brownlee</p>
+            <p class="lastp">18M views · 4 months ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=86CQq3pKSUw">
+            <img class="image1" src="thumbnail-5.webp" alt="thumbnail-1">
+          </a>
+          <div class="time">11:17</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image2" src="channel-5.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">Kadane's Algorithm to Maximum Sum Subarray Problem</p>
+            <p class="middlep">CS Dojo</p>
+            <p class="lastp">519K views · 5 years ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=yXWw0_UfSFg">
+            <img class="image1" src="thumbnail-6.webp" alt="thumbnail-1">
+          </a>
+          <div class="time">19:59</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image7" src="channel-6.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">Anything You Can Fit In The Circle I'll Pay For</p>
+            <p class="middlep">MrBeast</p>
+            <p class="lastp">141M views · 1 year ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=fNVa1qMbF9Y">
+            <img class="image1" src="thumbnail-7.webp" alt="thumbnail-1">
+          </a>
+          <div class="time">10:13</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image2" src="channel-7.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">Why Planes Don't Fly Over Tibet</p>
+            <p class="middlep">RealLifeLore</p>
+            <p class="lastp">6.6M views · 1 year ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=lFm4EM1juls">
+            <img class="image1" src="thumbnail-8.webp" alt="thumbnail-1">
+          </a>
+          <div class="time">7:12</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image2" src="channel-8.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">Inside The World's Biggest Passenger Plane</p>
+            <p class="middlep">Tech Vision</p>
+            <p class="lastp">3.7M views · 10 months ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=ixmxOlcrlUc">
+            <img class="image1" src="thumbnail-9.webp" alt="thumbnail-1">
+          </a>
+          <div class="time">13:17</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image2" src="channel-9.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">The SECRET to Super Human STRENGTH</p>
+            <p class="middlep">ThenX</p>
+            <p class="lastp">20M views · 3 year ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=R2vXbFp5C9o">
+            <img class="image1" src="thumbnail-10.webp" alt="thumbnail-1">
+          </a>
+          <div class="time manage">7:53</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image2" src="channel-10.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">How The World's Largest Cruise Ship Makes 30,000 Meals Every Day</p>
+            <p class="middlep">Business Insider</p>
+            <p class="lastp">14M views · 1 year ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=0nZuYyXET3s">
+            <img class="image1" src="thumbnail-11.webp" alt="thumbnail-1">
+          </a>
+          <div class="time manage">4:10</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image2" src="channel-11.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">Dubai's Crazy Underwater Train and Other Things #Only in Dubai</p>
+            <p class="middlep">Destination Tips</p>
+            <p class="lastp">3M views · 1 year ago</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="thumbnailimage1">
+          <a href="https://www.youtube.com/watch?v=9iMGFqMmUFs">
+            <img class="image1" src="thumbnail-12.webp" alt="thumbnail-1">
+          </a>
+          <div class="time manage">4:51</div>
+        </div>
+        <div class="thumbnailsub">
+          <div class="profile1">
+            <img class="image2" src="channel-12.jpeg">
+          </div>
+          <div class="text1">
+            <p class="darkp">What would happen if you didn't drink water? - Mia Nacamulli</p>
+            <p class="middlep">TED-Ed</p>
+            <p class="lastp">12M views · 5 years ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
