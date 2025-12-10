@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>YOUTUBE CLONE</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  p{
+    font-size: 11px;
+    margin-top: 0px;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .menu{
+    width: 24px;
+    margin-left:14px ;
+    margin-top: 9px;
+  }
+  .youtubelogo{
+   width: 90px;
+   margin-left: 19px;
+   vertical-align: top;
+   margin-top: 10px;
+  }
+  .leftsection{
+    vertical-align: top;
+  }
+  .videobutton{
+ width: 30px;
+  }
+  .youtubeapps{
+    width: 30px;
+     margin-right: 15px;
+    margin-left: 15px;
+  }
+  .notifications{
+    width: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .prfilephotoofyoutube{
+    width: 30px;
+    border-radius: 25px;
+    margin-right: 25px;
+  }
+  .lastsection{
+    
+    justify-items: space-between;
+  }
+  .searchbutton{
+    width: 28px;
+    padding-right: 8px;
+
+  }
+  .voicesearch{
+    width: 30px;
+    background-color: rgb(243, 243, 245);
+  }
+  .searchbar{
+    width: 330px;
+    height: 36px;
+    vertical-align: top;
+    margin-right: 0px;
+   padding-left: 10px;
+   font-family: Robodo,arial;
+   border-width: 0.1px;
+   border-color: rgb(152, 158, 163);
+  }
+  .button1{
+    height: 36px;
+    vertical-align: top;
+    margin-left: 0px;
+    padding-left: 13px;
+    background-color: rgb(243, 243, 245);
+    border:none;
+  }
+  .button2{
+    height: 36px;
+    background-color: rgb(243, 243, 245);
+    border: none;
+    border-radius: 38px;
+  }
+  .searchbar::placeholder{
+    font-size: 15px;
+    
+  }
+  .Home{
+    width: 25px;
+    margin-top: 20px;
+  }
+  .explore{
+    width: 25px;
+  }
+  .subscription{
+    width: 25px;
+  }
+  .originals{
+    width: 25px;
+  }
+  .music{
+    width: 25px;
+  }
+  .library{
+    width: 25px;
+  }
+  .sidebar{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    gap: 50px;
+    position: fixed;
+    top: 40px;
+    left: 0px;
+  }
+  .sidebar div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 5px;
+  }
+  .sidebar div p{
+    font-size: 15px;
+  }
+  .header{
+    margin-top: 13px;
+    position: fixed;
+  }
+  
+</style>
+<body>
+  <div class="header">
+    <div class="leftsection">
+    <img src="hamburger-menu.svg" alt="menu" class="menu">
+    <img src="youtube-logo.svg" class="youtubelogo" alt="youtube logo">
+    </div>
+    <div class="middle-section">
+      <input type="search" placeholder="Search" class="searchbar" >
+      <button class="button1">
+        <img src="search.svg" alt="searchsvg" class="searchbutton" title="Search">
+      </button>
+      <button class="button2">
+        <img src="voice-search-icon.svg" class="voicesearch" title="Search with your voice">
+      </button>
+    </div>
+    <div class="lastsection">
+     <img class="videobutton" src="upload.svg" alt="upload-button">
+     <img src="youtube-apps.svg" class="youtubeapps" alt="youtube apps">
+     <img src="notifications.svg" class="notifications" alt="notifications">
+     <img src="my-channel.jpeg" class="prfilephotoofyoutube" alt="profilephoto">
+    </div>
+  </div>
+  <div class="sidebar">
+     <div>
+      <img src="home.svg" class="Home">
+      <p>Home</p>
+     </div>
+     <div>
+     <img src="explore.svg" class="explore">
+     <p>Explore</p>
+     </div>
+     <div>
+     <img src="subscriptions.svg" class="subscription">
+     <p>Subscriptions</p>
+     </div>
+     <div>
+     <img src="originals.svg" class="originals">
+     <p>Originals</p>
+     </div>
+     <div>
+     <img src="youtube-music.svg" class="music">
+     <p>YouTube Music</p>
+     </div>
+     <div>
+     <img src="library.svg" class="library">
+     <p>Library</p>
+     </div>
+  </div>
+</body>
+</html>
